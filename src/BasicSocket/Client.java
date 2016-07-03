@@ -14,6 +14,7 @@ public class Client {
         Socket client = new Socket(hostName, portNumber);
         //建立连接后就可以往服务端写数据了
         Writer writer = new OutputStreamWriter(client.getOutputStream(),"UTF-8");
+
         writer.write(1);
         writer.flush();//写完后要记得flush
         writer.close();
