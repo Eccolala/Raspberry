@@ -14,7 +14,6 @@ public class Server {
         //为了简单起见，所有的异常信息都往外抛
         int port = 8899;
 
-
         /**
          * 方法二　使用BufferdReader
          */
@@ -23,6 +22,7 @@ public class Server {
             ServerSocket server = new ServerSocket(port);
             //server尝试接收其他Socket的连接请求，server的accept方法是阻塞式的
             Socket clientSocket = server.accept();
+            out.println("已建立连接");
             BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream(),"UTF-8"));
             String inputLine;
             while ((inputLine = in.readLine()) != null) {
