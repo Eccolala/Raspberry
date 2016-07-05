@@ -1,8 +1,33 @@
+import com.github.sarxos.webcam.Webcam;
+import com.github.sarxos.webcam.WebcamPanel;
+import com.github.sarxos.webcam.WebcamResolution;
+
+import javax.swing.*;
+import java.io.IOException;
+
 /**
  * Created by woops on 16-6-30.
  */
-public class Application {
-    public static void main(String arg[]){
-        System.out.println("Hello,Intellij");
+
+
+public class Application extends JFrame {
+
+
+    public static void main(String[] args) throws IOException {
+        Webcam webcam = Webcam.getDefault();
+        webcam.setViewSize(WebcamResolution.VGA.getSize());
+
+        WebcamPanel panel = new WebcamPanel(webcam);
+        panel.setFPSDisplayed(true);
+        panel.setDisplayDebugInfo(true);
+        panel.setImageSizeDisplayed(true);
+        panel.setMirrored(true);
+
+        JFrame window = new JFrame("Test webcam panel");
+        window.add(panel);
+        window.setResizable(true);
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.pack();
+        window.setVisible(true);
     }
 }

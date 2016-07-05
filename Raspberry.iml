@@ -7,5 +7,10 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="webcam-capture-0.3.12-20160507.091613-2" level="project" />
+    <orderEntry type="library" name="slf4j-api-1.7.21" level="project" />
+    <orderEntry type="library" name="bridj-0.6.2" level="project" />
+    <orderEntry type="library" name="slf4j-api-1.7.21 (2)" level="project" />
+    <orderEntry type="library" name="image4j-0.7" level="project" />
   </component>
 </module>
