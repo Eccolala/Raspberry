@@ -8,6 +8,9 @@ import java.net.Socket;
 
 import static java.lang.System.out;
 
+/**
+ * 如何完成只有一次发送的socket
+ */
 public class Server {
 
     public static void main(String args[]) throws IOException {
